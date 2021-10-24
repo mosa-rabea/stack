@@ -11,106 +11,118 @@ class LibraryTest {
         Library classUnderTest = new Library();
         assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
     }
-    @Test void testCanPush(){
-        Stack stack = new Stack();
-        stack.push("a");
-        stack.push("b");
-        String str = "{b}->{a}->NUll";
-        assertEquals(str,stack.toString());
+//    @Test void testCanPush(){
+//        Stack stack = new Stack();
+//        stack.push("a");
+//        stack.push("b");
+//        String str = "{b}->{a}->NUll";
+//        assertEquals(str,stack.toString());
+//    }
+//    @Test void testPop() throws Exception {
+//        Stack stack =new Stack();
+//        stack.push("a");
+//        stack.push("b");
+//        stack.pop();
+//        stack.pop();
+//
+//        assertEquals("Is empty",stack.toString());
+//
+//    }
+//    @Test void testPeek() throws Exception {
+//        Stack stack =new Stack();
+//        stack.push("a");
+//        stack.push("b");
+//        System.out.println(stack.peek().toString());
+//        assertEquals("b",stack.peek());
+//
+//
+//
+//    }
+//    @Test void testExceptionForEmptyStack() throws Exception {
+//        Stack stack =new Stack();
+//
+//        assertNotNull(stack);
+//
+//
+//
+//        try {
+//            stack.pop();
+//        }catch (Exception e){
+//            assertEquals(e.getMessage(),"Is empty");
+//        }
+//        try {
+//            stack.peek();
+//        }catch (Exception e){
+//            assertEquals(e.getMessage(),"Is empty");
+//        }
+//
+//
+//
+//    }
+//
+//
+//
+//
+//    @Test void testQueue() throws Exception {
+//        Queue queue = new Queue();
+//        assertNotNull(queue);
+//        try {
+//            queue.dequeue();
+//        }catch (Exception e){
+//            assertEquals(e.getMessage(),"Is empty");
+//        }
+//        try{
+//            queue.peek();
+//
+//        }catch (Exception e){
+//            assertEquals(e.getMessage(),"Is empty");
+//        }
+//
+//
+//    }
+//    @Test void testEnqueueToQueue() throws Exception {
+//        Queue queue = new Queue();
+//        queue.enqueue("a");
+//        queue.enqueue("b");
+//
+//        assertEquals("{a}->{b}->NUll",queue.toString());
+//
+//
+//
+//
+//
+//    }
+//    @Test void testDequeueFromQueue() throws Exception {
+//
+//        Queue queue =new Queue();
+//        queue.enqueue("1");
+//        queue.enqueue("2");
+//        queue.dequeue();
+//        queue.dequeue();
+//        System.out.println(queue.size);
+//        assertEquals("Is empty",queue.toString());
+//    }
+//
+//    @Test void testPeekQueue() throws Exception {
+//        Queue queue =new Queue();
+//        queue.enqueue("1");
+//        queue.enqueue("2");
+//        System.out.println(queue.peek().toString());
+//        assertEquals("2",queue.peek());
+//
+//
+//
+//    }
+
+    @Test void testPseudo() throws Exception{
+
+        PseudoQueue<String> test=new PseudoQueue<String>();
+        test.enqueue("a");
+        test.dequeue();
+
+        assertEquals("Is empty",test.stackInstance1.toString());
     }
-    @Test void testPop() throws Exception {
-        Stack stack =new Stack();
-        stack.push("a");
-        stack.push("b");
-        stack.pop();
-        stack.pop();
-
-        assertEquals("Is empty",stack.toString());
-
-    }
-    @Test void testPeek() throws Exception {
-        Stack stack =new Stack();
-        stack.push("a");
-        stack.push("b");
-        System.out.println(stack.peek().toString());
-        assertEquals("b",stack.peek());
 
 
 
-    }
-    @Test void testExceptionForEmptyStack() throws Exception {
-        Stack stack =new Stack();
-
-        assertNotNull(stack);
-
-
-
-        try {
-            stack.pop();
-        }catch (Exception e){
-            assertEquals(e.getMessage(),"Is empty");
-        }
-        try {
-            stack.peek();
-        }catch (Exception e){
-            assertEquals(e.getMessage(),"Is empty");
-        }
-
-
-
-    }
-
-
-
-
-    @Test void testQueue() throws Exception {
-        Queue queue = new Queue();
-        assertNotNull(queue);
-        try {
-            queue.dequeue();
-        }catch (Exception e){
-            assertEquals(e.getMessage(),"Is empty");
-        }
-        try{
-            queue.peek();
-
-        }catch (Exception e){
-            assertEquals(e.getMessage(),"Is empty");
-        }
-
-
-    }
-    @Test void testEnqueueToQueue() throws Exception {
-        Queue queue = new Queue();
-        queue.enqueue("a");
-        queue.enqueue("b");
-
-        assertEquals("{a}->{b}->NUll",queue.toString());
-
-
-
-
-
-    }
-    @Test void testDequeueFromQueue() throws Exception {
-
-        Queue queue =new Queue();
-        queue.enqueue("1");
-        queue.enqueue("2");
-        queue.dequeue();
-        queue.dequeue();
-        System.out.println(queue.size);
-        assertEquals("Is empty",queue.toString());
-    }
-
-    @Test void testPeekQueue() throws Exception {
-        Queue queue =new Queue();
-        queue.enqueue("1");
-        queue.enqueue("2");
-        System.out.println(queue.peek().toString());
-        assertEquals("2",queue.peek());
-
-
-
-    }
 }
