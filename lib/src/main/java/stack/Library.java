@@ -36,26 +36,32 @@ public class Library {
 
 
 
-        PseudoQueue<String> pseudoTest = new PseudoQueue<String>();
-        pseudoTest.enqueue("a");
-        pseudoTest.enqueue("b");
-        pseudoTest.enqueue("c");
-        pseudoTest.enqueue("d");
+//        PseudoQueue<String> pseudoTest = new PseudoQueue<String>();
+//        pseudoTest.enqueue("a");
+//        pseudoTest.enqueue("b");
+//        pseudoTest.enqueue("c");
+//        pseudoTest.enqueue("d");
+//
+//
+//
+//        System.out.println(pseudoTest.stackInstance1.toString());
+//        System.out.println(pseudoTest.dequeue());
+//        System.out.println(pseudoTest.stackInstance1.toString());
+//        System.out.println(pseudoTest.dequeue());
+//        System.out.println(pseudoTest.stackInstance1.toString());
+//        System.out.println(pseudoTest.dequeue());
+//        System.out.println(pseudoTest.stackInstance1.toString());
+//        System.out.println(pseudoTest.dequeue());
+//        System.out.println(pseudoTest.stackInstance1.toString());
+//
 
+// ----------------------------------------ch12-------------------------//
 
-
-        System.out.println(pseudoTest.stackInstance1.toString());
-        System.out.println(pseudoTest.dequeue());
-        System.out.println(pseudoTest.stackInstance1.toString());
-        System.out.println(pseudoTest.dequeue());
-        System.out.println(pseudoTest.stackInstance1.toString());
-        System.out.println(pseudoTest.dequeue());
-        System.out.println(pseudoTest.stackInstance1.toString());
-        System.out.println(pseudoTest.dequeue());
-        System.out.println(pseudoTest.stackInstance1.toString());
-
-
-
+        AnimalShelter newCat = new AnimalShelter();
+        Animal animal = new Cat();
+        newCat.enqueue(animal);
+        System.out.println(newCat.dequeue("cat"));
+        System.out.println(newCat.dequeue("cat"));
 
     }
 }
