@@ -36,11 +36,11 @@ public class Stack <T> {
         return temp.value;
     }
 
-    public String peek() throws Exception {
+    public T peek() throws Exception {
         if (empty()) {
             throw new Exception("Is empty");
         } else {
-            return (String) top.getValue();
+            return (T) top.getValue();
         }
     }
 

@@ -63,5 +63,36 @@ public class Library {
         System.out.println(newCat.dequeue("cat"));
         System.out.println(newCat.dequeue("cat"));
 
+
+
+        //-----------------ch13------------------------------------------//
+
+
+        String bracketsTest = "()[[Extra Characters]]";
+
+        System.out.println(validateBrackets(bracketsTest));
+
+    }
+
+
+    public static boolean validateBrackets(String bracketsTest) throws Exception {
+        Stack<Character> stackData = new Stack<>();
+        for (int i = 0; i < bracketsTest.length(); i++) {
+            if (bracketsTest.charAt(i) == '{' || bracketsTest.charAt(i) == '(' || bracketsTest.charAt(i) == '['){
+                stackData.push(bracketsTest.charAt(i));
+
+            }else if (bracketsTest.charAt(i) == '}' && !stackData.empty() && stackData.peek() =='{'){
+                stackData.pop();
+            }else if( bracketsTest.charAt(i) == ')' && !stackData.empty() && stackData.peek() =='('){
+                stackData.pop();
+            }else if (bracketsTest.charAt(i) == ']' && !stackData.empty() && stackData.peek() =='['){
+                stackData.pop();
+            }
+        }
+        return stackData.empty();
     }
 }
+
+
+
+
